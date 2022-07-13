@@ -1,0 +1,65 @@
+@import url(general.css);
+ol li {
+    color: black;
+    font-size: 20px;
+}
+
+code {
+    color: #ff002b;
+}
+
+.content {
+    margin: auto;
+}
+
+.content p {
+    font-size: 20px;
+}
+
+.content-left {
+    float: left;
+    width: 50%;
+    padding-top: 120px;
+    padding-left: 50px;
+    padding-right: 30px;
+}
+
+.content-right {
+    padding-top: 20px;
+    padding-right: 30px;
+}
+
+
+/*
+.content-right img {
+  width: 30%;
+}*/
+
+.code-js {
+    border-radius: 55px;
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+
+/******************/
+
+button {
+    text-transform: uppercase;
+    padding: 17px 20px;
+    border: 3px solid #ff002b;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+#array,
+#sortedArray {
+    padding: 12px;
+    width: 400px;
+    border: 3px solid #ff002b59;
+    border-radius: 25px;
+}
+
+#sortedArray {
+    margin-bottom: 30px;
+}

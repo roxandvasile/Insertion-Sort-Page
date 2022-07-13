@@ -1,0 +1,71 @@
+@import url(general.css);
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.column1 {
+  padding-top: 10px;
+  text-align: left;
+}
+
+.column1 h1,
+form {
+  padding-bottom: 9px;
+  padding-left: 200px;
+}
+
+.column2 {
+  margin-top: 100px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  padding-left: 70px;
+}
+
+/* Style inputs */
+input[type="text"],
+select,
+textarea {
+  width: 70%;
+  padding: 12px;
+  border: 1.7px solid #20202088;
+  border-radius: 17px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 5px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+/*butonul de submit*/
+input[type="submit"] {
+  background-color: white;
+  border: 2.5px solid var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #2b2c2b;
+  cursor: pointer;
+  padding: 12px 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Style the container/contact section */
+.raw {
+  border-radius: 5px;
+  padding: 74px;
+  padding-bottom: 0;
+}

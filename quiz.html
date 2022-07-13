@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="Styles/quiz.css" />
+</head>
+
+<body>
+    <!---->
+    <div class="navbar">
+        <div class="container">
+            <a class="logo" href="index.html">Insertion<span>Sort</span></a>
+
+            <img id="mobile-cta" class="mobile-menu" src="Images/menu.svg" alt="Open Navigation" />
+
+            <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="Images/close.svg" alt="Close Navigation" />
+
+                <ul class="primary-nav">
+                    <li><a href="index.html">Acasa</a></li>
+                    <li><a href="teorie.html">Teorie</a></li>
+                    <li><a href="implementare.html">Implementare</a></li>
+                    <li><a href="exemple.html">Exemple</a></li>
+                    <li><a href="exercitii.html">Exercitii</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="game.html">Game</a></li>
+                    <li><a href="game.html">Game</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <h1>QUIZ</h1>
+    <h2>Citeste cu atentie intrebarile si sigur vei raspunde corect. Succes!!</h2>
+
+
+    <div class="question question1">
+        <p>1. Pentru ce sunt folositi algoritmii de sortare?</p>
+        <input type="radio" name="question1"> pentru a compara elementele<br>
+        <input type="radio" name="question1" id="correct2" class="correct-answer"> pentru a reordona elementele<br>
+        <input type="radio" name="question1"> pentru a elimina elementele <br>
+    </div>
+    <br>
+    <div class="question question2">
+        <p>2. Avem matricea de numere [3, 9, 5, 2, 6]. <br>Care este matricea corecta <br> dupa ce numerele au fost ordonate crescator?</p>
+        <input type="radio" name="question2">[3,5,6,9,2]<br>
+        <input type="radio" name="question2" id="correct2" class="correct-answer">[2,3,5,6,9]<br>
+        <input type="radio" name="question2">[2,3,5,9,6]<br>
+    </div>
+
+    <div class="question question3">
+        <p>3. Algoritmul InsertionSort are o complexitate de timp de?</p>
+        <input type="radio" name="question3">O(n)<br>
+        <input type="radio" name="question3">2(O<sup>n</sup>)<br>
+        <input type="radio" name="question3" id="correct3" class="correct-answer">O(n<sup>2</sup>) <br>
+    </div>
+
+    <div class="question question4">
+        <p>4. Care este dezavantajul algoritmului?</p>
+        <input type="radio" name="question4">algoritmul este mai putin eficient pt seturi de date mai mici<br>
+        <input type="radio" name="question4" id="correct2" class="correct-answer">algoritmul este mai putin eficient pt seturi de date mai mari<br>
+        <input type="radio" name="question4">algoritmul este eficient pentru sortari mici de date, mai ales<br> pentru sortare substantiala<br>
+    </div>
+
+
+    <div class="question question5">
+        <p>5. Fiecare element din lista este sortat ....... </p>
+        <input type="radio" name="question5" id="correct1" class="correct-answer">unul cate unul de la stanga la dreapta<br>
+        <input type="radio" name="question5">unul cate unul de la dreapta la stanga<br>
+        <input type="radio" name="question5"> parcurgand în mod repetat lista<br>
+    </div>
+    <br>
+
+    <div class="question question6">
+        <p>6. Alege varianta corecta astfel incat matricea [3,5,6,9,2] sa fie ordonata descrescator.</p>
+        <input type="radio" name="question6"><code>while (j >= 0 && arr[j] > key)</code><br>
+        <input type="radio" name="question6" id="correct2" class="correct-answer"><code>while (j >= 0 && arr[j] < key)</code><br>
+        <input type="radio" name="question6"><code>while (j > 0 && arr[j] < key)</code><br>
+    </div>
+
+    <br>
+    <div class="question question7">
+        <p>7. Algoritmul InsertionSort: </p>
+        <input type="radio" name="question7">nu este eficient pentru sortari mici de date<br>
+        <input type="radio" name="question7">este eficient pentru sortari de date mai mari <br>
+        <input type="radio" name="question7" id="correct3" class="correct-answer">este eficient pentru sortari mici de date<br>
+    </div>
+
+    <div class="question question8">
+        <p>8. Timpul cel mai bun (O(n)) al algorimului apare atunci cand?</p>
+        <input type="radio" name="question8" id="correct1" class="correct-answer">matricea de intrare este deja sortata<br>
+        <input type="radio" name="question8">matricea de intrare nu este sortata <br>
+        <input type="radio" name="question8">matricea de intrare este pe jumatate sortata<br>
+    </div>
+
+    <div class="question question9">
+        <p>9. Care este primul pas pe care il facem atunci cand vrem sa sortam o matrice de dimensiune n in ordine crescatoare?</p>
+        <input type="radio" name="question9" id="correct1" class="correct-answer">iteram de la arr[1] la arr[n]<br>
+        <input type="radio" name="question9">iteram de la arr[1] la arr[n-1]<br>
+        <input type="radio" name="question9">iteram de la arr[0] la arr[n]<br>
+    </div>
+
+    <div class="question question10">
+        <p>10. Acest algoritm iti permite sa sortezi lista pe masura ce primesti date?</p>
+        <input type="radio" name="question10">Fals<br>
+        <input type="radio" name="question10" class="correct-answer">Adevarat<br>
+    </div>
+    <br>
+    <button id="submit" onClick="result()">Submit quiz</button>
+
+
+
+    <script src="Scripts/script.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+@import url(general.css);
+.cards-wrapper {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    row-gap: 10%;
+    position: absolute;
+    left: 140px;
+    top: 120px;
+}
+
+.card:hover {
+    background-color: rgb(210, 140, 140);
+    /*transform: rotate(-20deg);*/
+    transform: rotate(360deg);
+}
+
+.card {
+    height: 16em;
+    width: 15em;
+    font-size: 1.5em;
+    color: #202020;
+    border-radius: 1em;
+    padding: 1em;
+    display: flex;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    transition: width 1s, height 1s, background-color 2s, transform 1s;
+}
+
+.card p {
+    font-size: 0.75em;
+    margin-top: 0.5em;
+    line-height: 1.9em;
+    color: #202020;
+}

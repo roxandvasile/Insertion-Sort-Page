@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementare</title>
+    <link rel="stylesheet" href="Styles/implementare.css">
+
+    <link rel="stylesheet" href="Styles/highlight/styles/a11y-dark.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a class="logo" href="index.html">Insertion<span>Sort</span></a>
+
+            <img id="mobile-cta" class="mobile-menu" src="Images/menu.svg" alt="Open Navigation" />
+
+            <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="Images/close.svg" alt="Close Navigation" />
+
+                <ul class="primary-nav">
+                    <li><a href="index.html">Acasa</a></li>
+                    <li><a href="teorie.html">Teorie</a></li>
+                    <li><a href="implementare.html">Implementare</a></li>
+                    <li><a href="exemple.html">Exemple</a></li>
+                    <li><a href="exercitii.html">Exercitii</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="game.html">Game</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <div class="content-left">
+            <h1>Implementare - Insertion<span>Sort</span></h1>
+
+            <audio controls src="Audio/audio.mp3" type="audio/mp3"></audio>
+
+            <h2>Algoritm</h2>
+            <p>Pentru a sorta o matrice de dimensiune <code>n</code> in ordine crescatoare avem urmatorii pasi:
+                <ol>
+                    <li>Iteram de la <code>arr[1]</code> la <code>arr[n]</code> in matrice.</li>
+                    <li>Comparam elementul curent <code>key</code> cu predecesorul sau.</li>
+                    <li>Daca elementul <code>key</code> este mai mic decat predecesorul sau, il comparam cu elementul situat inaintea lui si mutam elementele mai mari cu o pozitie mai sus pentru a face loc pentru elementul schimbat.</li>
+                </ol>
+            </p>
+
+        </div>
+
+
+        <div class="content-right">
+            <h2>Implementare in Javascript</h2>
+
+            <pre>
+        <code class="code-js">
+
+        // Functia pentru sortarea matricei
+
+          function insertionSort(arr, n) {
+
+              let i, key, j;
+
+              for (i = 1; i < n; i++) {
+                  key = arr[i];
+                  j = i - 1;
+          
+                  /* Mutam elementele de arr[0..i-1], care
+                     sunt mai mari decat variabila key, 
+                     cu o pozitie inaintea pozitiei lor curente*/
+                     
+                  while (j >= 0 && arr[j] > key) {
+                      arr[j + 1] = arr[j];
+                      j = j - 1;
+                  }
+                  arr[j + 1] = key;
+              }
+          
+              return arr;
+          }
+
+      </code>
+    </pre>
+        </div>
+        <br>
+
+
+        <h2>Introduceti un sir de numere separate prin virgula</h2>
+
+        <br />
+        <input type="text" id="array"><br>
+        <br />
+        <button type="button" id="sortBtn">Sorteaza sirul</button><br>
+        <br />
+        <input type="text" id="sortedArray" readonly><br>
+        <br />
+
+    </div>
+
+    <script src="Scripts/implementare.js"></script>
+
+    <!--<script src="/path/to/highlight.min.js"></script>-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+
+</body>
+
+</html>

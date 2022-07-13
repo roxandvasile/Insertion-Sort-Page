@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teorie</title>
+    <link rel="stylesheet" href="Styles/teorie.css" />
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a class="logo" href="index.html">Insertion<span>Sort</span></a>
+
+            <img id="mobile-cta" class="mobile-menu" src="Images/menu.svg" alt="Open Navigation" />
+
+            <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="Images/close.svg" alt="Close Navigation" />
+
+                <ul class="primary-nav">
+                    <li><a href="index.html">Acasa</a></li>
+                    <li><a href="teorie.html">Teorie</a></li>
+                    <li><a href="implementare.html">Implementare</a></li>
+                    <li><a href="exemple.html">Exemple</a></li>
+                    <li><a href="exercitii.html">Exercitii</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="game.html">Game</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section class="cards-wrapper">
+        <div class="card">
+            <div>
+                <h1>Introducere</h1>
+                <p>
+                    Algoritmii de sortare sunt folosiți pentru a reordona elemente, unde un element poate fi un număr sau un șir. Sortarea ne ajută să localizăm datele țintă pe care dorim să le căutăm într-o manieră mai rapidă și convenabilă, prin sortarea lor în ordine
+                    crescătoare sau descendentă.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <h1>Insertion Sort</h1>
+                <p>
+                    Sortarea prin insertie sau Insertion Sort este un algoritm simplu si ușor de înțeles care funcționează cel mai bine cu o listă de date mică, sortând fiecare element din lista de date unul câte unul de la stânga la dreapta. Cu cât un algoritm necesită
+                    mai mult timp pentru a sorta, se spune că performanțele sale sunt slabe și trebuie să se ia în considerare un alt algoritm pentru a sorta datele.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <h1>Complexitate</h1>
+                <p>
+                    Sortarea prin insertie are o complexitate de timp de O(n
+                    <sup>2</sup>). În mod obișnuit, acest lucru nu este foarte eficient și nu ar trebui utilizat pentru liste mari. Cu toate acestea, de obicei, depășește algoritmi avansați, precum quicksort sau mergesort pentru liste mai mici. Cel mai
+                    bun caz al său, timpul este O (n) sau liniar, care apare dacă matricea de intrare este deja sortată
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <h1>Avantaje</h1>
+                <p>
+                    Este simplu de implementat.<br /> Este eficient pentru sortari mici de date, mai ales pentru sortare substantiala.
+                    <br /> Porti sorta lista pe masura ce primeste date.<br /> Are nevoie de o cantitate constanta de spatiu de memorie pentru intreaga operatiune.<br /> Adaptiv, adică este adecvat pentru seturile de date care sunt deja sortate în mod
+                    substanțial.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <h1>Dezavantaje</h1>
+                <p>
+                    Este mai putin eficient pe seturi de date mai mari. <br /> Este mai putin eficient decat sortarea heap.<br />
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const mobileBtn = document.getElementById("mobile-cta");
+        nav = document.querySelector("nav");
+        mobileBtnExit = document.getElementById("mobile-exit");
+
+        mobileBtn.addEventListener("click", () => {
+            nav.classList.add("menu-btn");
+        });
+
+        mobileBtnExit.addEventListener("click", () => {
+            nav.classList.remove("menu-btn");
+        });
+    </script>
+</body>
+
+</html>

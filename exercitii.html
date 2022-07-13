@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercitii</title>
+    <link rel="stylesheet" href="Styles/exercitii.css" />
+    <link rel="stylesheet" href="Styles/highlight/styles/a11y-dark.min.css">
+
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a class="logo" href="index.html">Insertion<span>Sort</span></a>
+
+            <img id="mobile-cta" class="mobile-menu" src="Images/menu.svg" alt="Open Navigation" />
+
+            <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="Images/close.svg" alt="Close Navigation" />
+
+                <ul class="primary-nav">
+                    <li><a href="index.html">Acasa</a></li>
+                    <li><a href="teorie.html">Teorie</a></li>
+                    <li><a href="implementare.html">Implementare</a></li>
+                    <li><a href="exemple.html">Exemple</a></li>
+                    <li><a href="exercitii.html">Exercitii</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="game.html">Game</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Exercitii</h1>
+        <br />
+
+        <h2>
+            <span>Exercitiul 1</span>: Cu ajutorul explicatiilor de la exemplul 2, realizati un videoclip care sa ilustreze algoritmul insertion sort. Va puteti folosi de 5 carti de joc, ordinea acestora este la alegerea dumneavostra.
+        </h2>
+
+        <video width="720" height="340" controls muted>
+        <source src="Video/clip_carti.mp4" />
+      </video>
+        <br /><br />
+
+        <h2>
+            <span>Exercitiul 2</span>: Se da urmatoarea matrice de numere
+            <code>[3 6 4 9 1 3 7]</code>. Ordonati pe foaie matricea in ordine crescatoare si aratati toti pasii astfel incat iesirea <br />sa fie urmatoarea: <code>[1 3 3 4 6 7 9]</code>
+        </h2>
+
+        <br />
+
+        <img src="Images/exercitiul2.jpg" />
+        <img src="Images/pasi_ex2.jpg" />
+
+        <br /><br />
+
+        <h2>
+            <span>Exercitiul 3</span>: Modificati implementarea algoritmului insertion sort in Javascript astfel incat matricea [12, 11, 13, 5, 6] sa fie ordonata descrescator.<br /><br />
+            <!--<img src="Images/implementare_descrescator.png" />-->
+
+        </h2>
+        <pre>
+          <code class="code-js">
+
+            // Functia pentru sortarea matricei 
+
+          function insertionSort(arr, n) {
+
+            let i, key, j;
+
+            for (i = 1; i < n; i++) {
+                key = arr[i];
+                j = i - 1;
+        
+                /* Mutam elementele de arr[0..i-1], care
+                   sunt mai mari decat variabila key, 
+                   cu o pozitie inaintea pozitiei lor curente*/
+                   
+                while (j >= 0 && arr[j] < key) {
+                    arr[j + 1] = arr[j];
+                    j = j - 1;
+                }
+                arr[j + 1] = key;
+            }
+        
+            return arr;
+        }
+  
+        </code>
+      </pre>
+
+    </div>
+
+    <script src="Scripts/implementare_descrescator.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

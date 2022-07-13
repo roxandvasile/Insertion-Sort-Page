@@ -1,0 +1,119 @@
+:root {
+    --primary-color: #ff002b;
+}
+
+body {
+    background: #f2f2f2;
+    margin: 0;
+    text-align: center;
+    color: black;
+}
+
+.logo {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 1.2em;
+}
+
+span {
+    color: var(--primary-color);
+}
+
+.navbar {
+    background: white;
+    padding: 1em;
+    text-decoration: none;
+}
+
+.primary-nav {
+    margin-top: 2em;
+}
+
+a,
+li {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 0.5em;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+ul a:hover {
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+}
+
+nav {
+    display: none;
+}
+
+.container {
+    display: flex;
+    place-content: space-between;
+}
+
+.mobile-menu {
+    cursor: pointer;
+}
+
+nav.menu-btn {
+    display: block;
+}
+
+nav {
+    position: fixed;
+    z-index: 999;
+    width: 45%;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    background: rgb(218, 98, 98);
+    padding: 1em;
+}
+
+.mobile-menu-exit {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 770px) {
+    .mobile-menu,
+    .mobile-menu-exit {
+        display: none;
+    }
+    .navbar .container {
+        display: grid;
+        grid-template-columns: 180px auto;
+        justify-content: unset;
+    }
+    .logo {
+        margin: 0.4em;
+    }
+    .primary-nav {
+        margin: 0;
+    }
+    .navbar nav {
+        display: flex;
+        justify-content: space-between;
+        background: none;
+        position: unset;
+        height: auto;
+        width: 100%;
+        padding: 0;
+    }
+    ul {
+        display: flex;
+    }
+    a {
+        color: black;
+        font-size: 1em;
+        padding: 0.1em 1em;
+    }
+    li.current a {
+        font-weight: bold;
+    }
+}

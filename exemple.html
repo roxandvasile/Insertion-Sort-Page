@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemple</title>
+    <link rel="stylesheet" href="Styles/exemple.css" />
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a class="logo" href="index.html">Insertion<span>Sort</span></a>
+
+            <img id="mobile-cta" class="mobile-menu" src="Images/menu.svg" alt="Open Navigation" />
+
+            <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="Images/close.svg" alt="Close Navigation" />
+
+                <ul class="primary-nav">
+                    <li><a href="index.html">Acasa</a></li>
+                    <li><a href="teorie.html">Teorie</a></li>
+                    <li><a href="implementare.html">Implementare</a></li>
+                    <li><a href="exemple.html">Exemple</a></li>
+                    <li><a href="exercitii.html">Exercitii</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="game.html">Game</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <header>
+        <h1>Insertion<span>Sort</span> - exemple din viata reala</h1>
+        <img src="Images/exemple-bg.png" />
+    </header>
+
+    <main>
+        <h2>Exemplul 1: Sortarea cartilor</h2>
+        <p>
+            Un exemplu de sortare prin insertie, din viata reala este intalnit atunci cand<br /> sortam cartile de joc din mana.<br /> Sa presupunem ca prima carte este deja sortata, apoi selectam o carte nesortata.
+            <br /> Daca cartea nesortata selectata este mai mare decat prima carte, aceasta
+            <br /> va fi plasata in partea dreapta; in caz contrar, va fi plasata in
+            <br />partea stanga. In mod similar se parcurg si celelalte carti.
+        </p>
+    </main>
+
+    <section>
+        <div class="carti-neordonate">
+            <h3>Carti neordonate</h3>
+            <img src="Images/carti_neordonate.png" />
+        </div>
+
+        <div class="carti-ordonate">
+            <h3>Carti ordonate</h3>
+            <img src="Images/carti_ordonate.png" />
+        </div>
+    </section>
+
+    <div class="exemplul2">
+        <h2>Exemplul 2: Sortarea notelor</h2>
+        <p>
+            Luam in considerare un elev caruia i s-a atribuit aranjarea notelor in ordine crescatoare, obtinute la un test de evaluare. Vom asocia notele obtinute cu o matrice, <br />deci vom avea o matrice nesortata dupa cum urmeaza:
+            <br />
+            <img src="Images/note1.png" alt="" />
+            <br /> Mai intai o sa comparam foaia de examen de pe indexul 0 cu celelate foi. Deoarece foaia de pe indexul 1 are o nota mai mica decat nota de pe foaia cu indexul 0,<br /> o vom insera in partea stanga a indexului 0. Acum vom avea o noua
+            matrice transformata. Dupa cum observam, cele doua note au fost schimbate intre ele:
+            <br />
+            <img src="Images/note2.png" alt="" />
+            <br /> Acum, vom compara din nou foia de pe indexul 1 cu foaia de pe indexul 2 si vom constata ca foaia de pe indexul 2 este mai mare decat foaia selectata, adica matricea este deja sortata. Matricea noastra va ramane la fel.
+            <br />
+            <img src="Images/note2.png" alt="" />
+            <br /> Acum le comparam din nou, dar de data aceasta, vom compara foaie de la indexul 2 cu foia de pe indexul 3, deoarece partea din stanga a indexului 2 este deja sortata. Vom observa ca foaia de pe indexul 3 este mai mica decat precedenta,
+            asa ca o sa cauta in matricea deja sortata anterior si observam ca locul acesteia <br /> este pe indexul 0. Matricea noastra va fi:
+            <br />
+            <img src="Images/note3.png" alt="" />
+            <br /> Comparam din nou foaia de pe indexul 3 cu foaia de pe indexul 4 si constatam ca nota de pe foaia cu indexul 4 este mai mica decat foaia de pe indexul 3. <br /> Astfel, vom gasi pozitia corecta pentru aceasta nota in stanga(unde avem
+            deja matricea sortata) si o vom pozitiona pe indexul 1. Matricea noastra, este acum sortata, deci elevul a sortat corect in odine crescatoare toate notele obtinute la testul de evaluare.
+            <br />
+            <img src="Images/note4.png" alt="" />
+        </p>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <img src="Images/up-arrow.png" alt="" />
+    </button>
+
+    <script>
+        //Get the button:
+        mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+</body>
+
+</html>
